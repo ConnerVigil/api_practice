@@ -3,6 +3,7 @@ import axios from "axios";
 
 const ipURL = "https://api.ipify.org?format=json";
 const infoURL = "https://ipinfo.io/";
+const token = "?token=2e6c386c283d43";
 
 const IPAddress = () => {
     const [ipAddress, setipAddress] = useState("");
@@ -11,25 +12,24 @@ const IPAddress = () => {
     const [country, setCountry] = useState("");
     const [postalCode, setPostalCode] = useState("");
 
-    // TODO figure out how to make both api calls at once
-
     React.useEffect(() => {
         getIPAddress();
     }, []);
 
     React.useEffect(() => {
-        getIPInfo();
+        if (ipAddress) {
+            getIPInfo(ipAddress);
+        }
     }, [ipAddress]);
 
     function getIPAddress() {
         axios.get(ipURL).then((response) => {
             setipAddress(response.data.ip);
-            console.log("IpAddress: " + ipAddress);
         });
     }
 
     function getIPInfo() {
-        axios.get(infoURL + ipAddress + "/geo").then((response) => {
+        axios.get(infoURL + ipAddress + token).then((response) => {
             setCity(response.data.city);
             setRegion(response.data.region);
             setCountry(response.data.country);
