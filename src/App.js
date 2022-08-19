@@ -2,6 +2,7 @@ import React from 'react';
 import Kanye from "./Kanye";
 import Bitcoin from "./BitCoin";
 import NameGuess from "./NameGuess";
+import IPAddress from "./IPAddress";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Kanye />
             <Bitcoin />
             <NameGuess />
+            <IPAddress />
 
         </div>
 

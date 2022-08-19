@@ -29,7 +29,7 @@ const NameGuess = () => {
 
     return (
         <div className='APIContainer'>
-            <h3>Personal Info APIs</h3>
+            <h3>Guess your info APIs 🔓</h3>
 
             <div className='horizontalContainer'>
                 <h6>Enter your name:</h6>
@@ -40,7 +40,7 @@ const NameGuess = () => {
             <div className='alignVertical'>
                 <p className='nameGuessLine'>Your gender is: <strong>{Gender}</strong></p>
                 <p className='nameGuessLine'>Your age is: <strong>{Age}</strong></p>
-                <p className='nameGuessLine'>Your nationality is: <strong>{Nationality}</strong></p>
+                <p className='nameGuessLine'>Your nationality country code is: <strong>{Nationality}</strong></p>
             </div>
 
         </div>
