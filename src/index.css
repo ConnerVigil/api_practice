@@ -18,8 +18,21 @@
     justify-content: center;
 }
 
+.horizontalContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%;
+    justify-content: center;
+}
+
+.horizontalContainer > h6 {
+    margin-right: 5px;
+}
+
 .APIContainer > h3 {
     margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .kanyeName {
@@ -48,4 +61,21 @@
 
 .value {
     font-weight: bold;
+}
+
+.nameGuessLine {
+    margin: 0px;
+}
+
+.alignVertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+}
+
+.submitButton {
+    background-color: dodgerblue;
+    color: whitesmoke;
+    margin: 5px;
 }

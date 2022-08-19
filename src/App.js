@@ -1,6 +1,7 @@
 import React from 'react';
 import Kanye from "./Kanye";
 import Bitcoin from "./BitCoin";
+import NameGuess from "./NameGuess";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
 
             <Kanye />
             <Bitcoin />
+            <NameGuess />
 
         </div>
 
